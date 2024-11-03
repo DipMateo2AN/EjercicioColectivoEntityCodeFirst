@@ -1,32 +1,43 @@
 ﻿using Modelo;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Markup;
 
 namespace Controladora
 {
     public class ControladoraColectivos
     {
         private Context context = new Context();
-        public void AgregarColectivo(Pasajero nuevoPasajero)
+        public bool AgregarColectivo(Colectivo nuevoColectivo)
         {
-            var busqueda = context.Pasajeros.FirstOrDefault(p => p.PasajeroId == nuevoPasajero.PasajeroId);
+            var busqueda = context.Colectivos.FirstOrDefault(p => p.ColectivoId == nuevoColectivo.ColectivoId);
             if (busqueda == null)
             {
-                context.Pasajeros.Add(nuevoPasajero);
+                context.Colectivos.Add(nuevoColectivo);
                 context.SaveChanges();
+                return true;
             }
+            return false;
         }
-        public void EliminarPasajero(Pasajero nuevoPasajero)
+        public bool EliminarColectivo(Colectivo colectivo)
         {
-            var busqueda = context.Pasajeros.FirstOrDefault(p => p.PasajeroId == nuevoPasajero.PasajeroId);
+            var busqueda = context.Colectivos.FirstOrDefault(p => p.ColectivoId == colectivo.ColectivoId);
             if (busqueda != null)
             {
-                context.Pasajeros.Add(nuevoPasajero);
+                context.Colectivos.Remove(colectivo);
                 context.SaveChanges();
+                return true;
             }
+            return false;
+        }
+
+        public List<Colectivo> ListarColectivos()
+        {
+            return context.Colectivos.ToList();
         }
     }
 }

@@ -28,141 +28,108 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
-            dataGridView2 = new DataGridView();
-            dataGridView3 = new DataGridView();
-            groupBox1 = new GroupBox();
-            groupBox2 = new GroupBox();
-            txtPatente = new TextBox();
-            txtNombre = new TextBox();
-            numCantidadAsientos = new NumericUpDown();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
+            dgvPasajeros = new DataGridView();
+            dgvPasajerosEstudiantes = new DataGridView();
+            dgvColectivos = new DataGridView();
+            gBoxColectivo = new GroupBox();
+            btnEliminarColectivo = new Button();
             btnAgregarColectivo = new Button();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            txtApellido = new TextBox();
-            txtNombrePasajero = new TextBox();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            numCantidadAsientos = new NumericUpDown();
+            txtNombre = new TextBox();
+            txtPatente = new TextBox();
+            gBoxPasajero = new GroupBox();
+            btnEliminarPasajero = new Button();
+            btnAgregarPasajero = new Button();
+            label8 = new Label();
+            rbtnNoEstudiante = new RadioButton();
+            rbtnSiEstudiante = new RadioButton();
+            label7 = new Label();
             txtLegajo = new TextBox();
             txtDNI = new TextBox();
-            label7 = new Label();
-            rbtnSiEstudiante = new RadioButton();
-            rbtnNoEstudiante = new RadioButton();
-            label8 = new Label();
-            btnAgregarPasajero = new Button();
+            txtApellido = new TextBox();
+            label4 = new Label();
+            txtNombrePasajero = new TextBox();
+            label6 = new Label();
+            label5 = new Label();
             label9 = new Label();
             label10 = new Label();
             label11 = new Label();
             btnSalir = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
-            groupBox1.SuspendLayout();
-            groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvPasajeros).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvPasajerosEstudiantes).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvColectivos).BeginInit();
+            gBoxColectivo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numCantidadAsientos).BeginInit();
+            gBoxPasajero.SuspendLayout();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgvPasajeros
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(325, 181);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(463, 115);
-            dataGridView1.TabIndex = 0;
+            dgvPasajeros.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvPasajeros.Location = new Point(325, 181);
+            dgvPasajeros.Name = "dgvPasajeros";
+            dgvPasajeros.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvPasajeros.Size = new Size(463, 115);
+            dgvPasajeros.TabIndex = 0;
             // 
-            // dataGridView2
+            // dgvPasajerosEstudiantes
             // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(325, 337);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(463, 115);
-            dataGridView2.TabIndex = 1;
+            dgvPasajerosEstudiantes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvPasajerosEstudiantes.Location = new Point(325, 337);
+            dgvPasajerosEstudiantes.Name = "dgvPasajerosEstudiantes";
+            dgvPasajerosEstudiantes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvPasajerosEstudiantes.Size = new Size(463, 115);
+            dgvPasajerosEstudiantes.TabIndex = 1;
             // 
-            // dataGridView3
+            // dgvColectivos
             // 
-            dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView3.Location = new Point(325, 32);
-            dataGridView3.Name = "dataGridView3";
-            dataGridView3.Size = new Size(463, 115);
-            dataGridView3.TabIndex = 2;
+            dgvColectivos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvColectivos.Location = new Point(325, 32);
+            dgvColectivos.Name = "dgvColectivos";
+            dgvColectivos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvColectivos.Size = new Size(463, 115);
+            dgvColectivos.TabIndex = 2;
+            dgvColectivos.CellClick += dgvColectivos_CellClick;
             // 
-            // groupBox1
+            // gBoxColectivo
             // 
-            groupBox1.Controls.Add(btnAgregarColectivo);
-            groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(numCantidadAsientos);
-            groupBox1.Controls.Add(txtNombre);
-            groupBox1.Controls.Add(txtPatente);
-            groupBox1.Location = new Point(12, 12);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(265, 163);
-            groupBox1.TabIndex = 3;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Datos colectivo";
+            gBoxColectivo.Controls.Add(btnEliminarColectivo);
+            gBoxColectivo.Controls.Add(btnAgregarColectivo);
+            gBoxColectivo.Controls.Add(label3);
+            gBoxColectivo.Controls.Add(label2);
+            gBoxColectivo.Controls.Add(label1);
+            gBoxColectivo.Controls.Add(numCantidadAsientos);
+            gBoxColectivo.Controls.Add(txtNombre);
+            gBoxColectivo.Controls.Add(txtPatente);
+            gBoxColectivo.Location = new Point(12, 12);
+            gBoxColectivo.Name = "gBoxColectivo";
+            gBoxColectivo.Size = new Size(265, 163);
+            gBoxColectivo.TabIndex = 3;
+            gBoxColectivo.TabStop = false;
+            gBoxColectivo.Text = "Datos colectivo";
             // 
-            // groupBox2
+            // btnEliminarColectivo
             // 
-            groupBox2.Controls.Add(btnAgregarPasajero);
-            groupBox2.Controls.Add(label8);
-            groupBox2.Controls.Add(rbtnNoEstudiante);
-            groupBox2.Controls.Add(rbtnSiEstudiante);
-            groupBox2.Controls.Add(label7);
-            groupBox2.Controls.Add(txtLegajo);
-            groupBox2.Controls.Add(txtDNI);
-            groupBox2.Controls.Add(txtApellido);
-            groupBox2.Controls.Add(label4);
-            groupBox2.Controls.Add(txtNombrePasajero);
-            groupBox2.Controls.Add(label6);
-            groupBox2.Controls.Add(label5);
-            groupBox2.Location = new Point(12, 181);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(265, 271);
-            groupBox2.TabIndex = 4;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Datos Pasajero";
+            btnEliminarColectivo.Location = new Point(184, 134);
+            btnEliminarColectivo.Name = "btnEliminarColectivo";
+            btnEliminarColectivo.Size = new Size(75, 23);
+            btnEliminarColectivo.TabIndex = 6;
+            btnEliminarColectivo.Text = "Eliminar";
+            btnEliminarColectivo.UseVisualStyleBackColor = true;
+            btnEliminarColectivo.Click += btnEliminarColectivo_Click;
             // 
-            // txtPatente
+            // btnAgregarColectivo
             // 
-            txtPatente.Location = new Point(148, 22);
-            txtPatente.Name = "txtPatente";
-            txtPatente.Size = new Size(100, 23);
-            txtPatente.TabIndex = 0;
-            // 
-            // txtNombre
-            // 
-            txtNombre.Location = new Point(148, 56);
-            txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(100, 23);
-            txtNombre.TabIndex = 1;
-            // 
-            // numCantidadAsientos
-            // 
-            numCantidadAsientos.Location = new Point(148, 91);
-            numCantidadAsientos.Name = "numCantidadAsientos";
-            numCantidadAsientos.Size = new Size(100, 23);
-            numCantidadAsientos.TabIndex = 2;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(16, 30);
-            label1.Name = "label1";
-            label1.Size = new Size(47, 15);
-            label1.TabIndex = 3;
-            label1.Text = "Patente";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(16, 64);
-            label2.Name = "label2";
-            label2.Size = new Size(51, 15);
-            label2.TabIndex = 4;
-            label2.Text = "Nombre";
+            btnAgregarColectivo.Location = new Point(96, 134);
+            btnAgregarColectivo.Name = "btnAgregarColectivo";
+            btnAgregarColectivo.Size = new Size(75, 23);
+            btnAgregarColectivo.TabIndex = 5;
+            btnAgregarColectivo.Text = "Agregar";
+            btnAgregarColectivo.UseVisualStyleBackColor = true;
+            btnAgregarColectivo.Click += btnAgregarColectivo_Click;
             // 
             // label3
             // 
@@ -173,58 +140,132 @@
             label3.TabIndex = 5;
             label3.Text = "Cant asientos";
             // 
-            // btnAgregarColectivo
+            // label2
             // 
-            btnAgregarColectivo.Location = new Point(173, 134);
-            btnAgregarColectivo.Name = "btnAgregarColectivo";
-            btnAgregarColectivo.Size = new Size(75, 23);
-            btnAgregarColectivo.TabIndex = 5;
-            btnAgregarColectivo.Text = "Agregar";
-            btnAgregarColectivo.UseVisualStyleBackColor = true;
+            label2.AutoSize = true;
+            label2.Location = new Point(16, 64);
+            label2.Name = "label2";
+            label2.Size = new Size(51, 15);
+            label2.TabIndex = 4;
+            label2.Text = "Nombre";
             // 
-            // label4
+            // label1
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(16, 102);
-            label4.Name = "label4";
-            label4.Size = new Size(30, 15);
-            label4.TabIndex = 8;
-            label4.Text = "DNI:";
+            label1.AutoSize = true;
+            label1.Location = new Point(16, 30);
+            label1.Name = "label1";
+            label1.Size = new Size(47, 15);
+            label1.TabIndex = 3;
+            label1.Text = "Patente";
             // 
-            // label5
+            // numCantidadAsientos
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(16, 67);
-            label5.Name = "label5";
-            label5.Size = new Size(51, 15);
-            label5.TabIndex = 7;
-            label5.Text = "Apellido";
+            numCantidadAsientos.Location = new Point(148, 91);
+            numCantidadAsientos.Name = "numCantidadAsientos";
+            numCantidadAsientos.Size = new Size(100, 23);
+            numCantidadAsientos.TabIndex = 2;
             // 
-            // label6
+            // txtNombre
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(16, 33);
-            label6.Name = "label6";
-            label6.Size = new Size(51, 15);
-            label6.TabIndex = 6;
-            label6.Text = "Nombre";
+            txtNombre.Location = new Point(148, 56);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(100, 23);
+            txtNombre.TabIndex = 1;
             // 
-            // txtApellido
+            // txtPatente
             // 
-            txtApellido.Location = new Point(148, 62);
-            txtApellido.Name = "txtApellido";
-            txtApellido.Size = new Size(100, 23);
-            txtApellido.TabIndex = 7;
+            txtPatente.Location = new Point(148, 22);
+            txtPatente.Name = "txtPatente";
+            txtPatente.Size = new Size(100, 23);
+            txtPatente.TabIndex = 0;
             // 
-            // txtNombrePasajero
+            // gBoxPasajero
             // 
-            txtNombrePasajero.Location = new Point(148, 33);
-            txtNombrePasajero.Name = "txtNombrePasajero";
-            txtNombrePasajero.Size = new Size(100, 23);
-            txtNombrePasajero.TabIndex = 6;
+            gBoxPasajero.Controls.Add(btnEliminarPasajero);
+            gBoxPasajero.Controls.Add(btnAgregarPasajero);
+            gBoxPasajero.Controls.Add(label8);
+            gBoxPasajero.Controls.Add(rbtnNoEstudiante);
+            gBoxPasajero.Controls.Add(rbtnSiEstudiante);
+            gBoxPasajero.Controls.Add(label7);
+            gBoxPasajero.Controls.Add(txtLegajo);
+            gBoxPasajero.Controls.Add(txtDNI);
+            gBoxPasajero.Controls.Add(txtApellido);
+            gBoxPasajero.Controls.Add(label4);
+            gBoxPasajero.Controls.Add(txtNombrePasajero);
+            gBoxPasajero.Controls.Add(label6);
+            gBoxPasajero.Controls.Add(label5);
+            gBoxPasajero.Enabled = false;
+            gBoxPasajero.Location = new Point(12, 181);
+            gBoxPasajero.Name = "gBoxPasajero";
+            gBoxPasajero.Size = new Size(265, 271);
+            gBoxPasajero.TabIndex = 4;
+            gBoxPasajero.TabStop = false;
+            gBoxPasajero.Text = "Datos Pasajero";
+            // 
+            // btnEliminarPasajero
+            // 
+            btnEliminarPasajero.Location = new Point(184, 226);
+            btnEliminarPasajero.Name = "btnEliminarPasajero";
+            btnEliminarPasajero.Size = new Size(75, 23);
+            btnEliminarPasajero.TabIndex = 7;
+            btnEliminarPasajero.Text = "Eliminar";
+            btnEliminarPasajero.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregarPasajero
+            // 
+            btnAgregarPasajero.Location = new Point(96, 226);
+            btnAgregarPasajero.Name = "btnAgregarPasajero";
+            btnAgregarPasajero.Size = new Size(75, 23);
+            btnAgregarPasajero.TabIndex = 6;
+            btnAgregarPasajero.Text = "Agregar";
+            btnAgregarPasajero.UseVisualStyleBackColor = true;
+            btnAgregarPasajero.Click += btnAgregarPasajero_Click;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(16, 145);
+            label8.Name = "label8";
+            label8.Size = new Size(65, 15);
+            label8.TabIndex = 14;
+            label8.Text = "Estudiante:";
+            // 
+            // rbtnNoEstudiante
+            // 
+            rbtnNoEstudiante.AutoSize = true;
+            rbtnNoEstudiante.Location = new Point(205, 144);
+            rbtnNoEstudiante.Name = "rbtnNoEstudiante";
+            rbtnNoEstudiante.Size = new Size(43, 19);
+            rbtnNoEstudiante.TabIndex = 13;
+            rbtnNoEstudiante.TabStop = true;
+            rbtnNoEstudiante.Text = "NO";
+            rbtnNoEstudiante.UseVisualStyleBackColor = true;
+            rbtnNoEstudiante.CheckedChanged += rbtnNoEstudiante_CheckedChanged;
+            // 
+            // rbtnSiEstudiante
+            // 
+            rbtnSiEstudiante.AutoSize = true;
+            rbtnSiEstudiante.Location = new Point(148, 145);
+            rbtnSiEstudiante.Name = "rbtnSiEstudiante";
+            rbtnSiEstudiante.Size = new Size(34, 19);
+            rbtnSiEstudiante.TabIndex = 12;
+            rbtnSiEstudiante.TabStop = true;
+            rbtnSiEstudiante.Text = "SI";
+            rbtnSiEstudiante.UseVisualStyleBackColor = true;
+            rbtnSiEstudiante.CheckedChanged += rbtnSiEstudiante_CheckedChanged;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(16, 189);
+            label7.Name = "label7";
+            label7.Size = new Size(42, 15);
+            label7.TabIndex = 11;
+            label7.Text = "Legajo";
             // 
             // txtLegajo
             // 
+            txtLegajo.Enabled = false;
             txtLegajo.Location = new Point(148, 184);
             txtLegajo.Name = "txtLegajo";
             txtLegajo.Size = new Size(100, 23);
@@ -237,54 +278,46 @@
             txtDNI.Size = new Size(100, 23);
             txtDNI.TabIndex = 9;
             // 
-            // label7
+            // txtApellido
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(16, 189);
-            label7.Name = "label7";
-            label7.Size = new Size(42, 15);
-            label7.TabIndex = 11;
-            label7.Text = "Legajo";
+            txtApellido.Location = new Point(148, 62);
+            txtApellido.Name = "txtApellido";
+            txtApellido.Size = new Size(100, 23);
+            txtApellido.TabIndex = 7;
             // 
-            // rbtnSiEstudiante
+            // label4
             // 
-            rbtnSiEstudiante.AutoSize = true;
-            rbtnSiEstudiante.Location = new Point(148, 145);
-            rbtnSiEstudiante.Name = "rbtnSiEstudiante";
-            rbtnSiEstudiante.Size = new Size(34, 19);
-            rbtnSiEstudiante.TabIndex = 12;
-            rbtnSiEstudiante.TabStop = true;
-            rbtnSiEstudiante.Text = "SI";
-            rbtnSiEstudiante.UseVisualStyleBackColor = true;
+            label4.AutoSize = true;
+            label4.Location = new Point(16, 102);
+            label4.Name = "label4";
+            label4.Size = new Size(30, 15);
+            label4.TabIndex = 8;
+            label4.Text = "DNI:";
             // 
-            // rbtnNoEstudiante
+            // txtNombrePasajero
             // 
-            rbtnNoEstudiante.AutoSize = true;
-            rbtnNoEstudiante.Location = new Point(205, 144);
-            rbtnNoEstudiante.Name = "rbtnNoEstudiante";
-            rbtnNoEstudiante.Size = new Size(43, 19);
-            rbtnNoEstudiante.TabIndex = 13;
-            rbtnNoEstudiante.TabStop = true;
-            rbtnNoEstudiante.Text = "NO";
-            rbtnNoEstudiante.UseVisualStyleBackColor = true;
+            txtNombrePasajero.Location = new Point(148, 33);
+            txtNombrePasajero.Name = "txtNombrePasajero";
+            txtNombrePasajero.Size = new Size(100, 23);
+            txtNombrePasajero.TabIndex = 6;
             // 
-            // label8
+            // label6
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(16, 145);
-            label8.Name = "label8";
-            label8.Size = new Size(65, 15);
-            label8.TabIndex = 14;
-            label8.Text = "Estudiante:";
+            label6.AutoSize = true;
+            label6.Location = new Point(16, 33);
+            label6.Name = "label6";
+            label6.Size = new Size(51, 15);
+            label6.TabIndex = 6;
+            label6.Text = "Nombre";
             // 
-            // btnAgregarPasajero
+            // label5
             // 
-            btnAgregarPasajero.Location = new Point(173, 232);
-            btnAgregarPasajero.Name = "btnAgregarPasajero";
-            btnAgregarPasajero.Size = new Size(75, 23);
-            btnAgregarPasajero.TabIndex = 6;
-            btnAgregarPasajero.Text = "Agregar";
-            btnAgregarPasajero.UseVisualStyleBackColor = true;
+            label5.AutoSize = true;
+            label5.Location = new Point(16, 67);
+            label5.Name = "label5";
+            label5.Size = new Size(51, 15);
+            label5.TabIndex = 7;
+            label5.Text = "Apellido";
             // 
             // label9
             // 
@@ -331,34 +364,34 @@
             Controls.Add(label11);
             Controls.Add(label10);
             Controls.Add(label9);
-            Controls.Add(groupBox2);
-            Controls.Add(groupBox1);
-            Controls.Add(dataGridView3);
-            Controls.Add(dataGridView2);
-            Controls.Add(dataGridView1);
+            Controls.Add(gBoxPasajero);
+            Controls.Add(gBoxColectivo);
+            Controls.Add(dgvColectivos);
+            Controls.Add(dgvPasajerosEstudiantes);
+            Controls.Add(dgvPasajeros);
             Name = "Form1";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvPasajeros).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvPasajerosEstudiantes).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvColectivos).EndInit();
+            gBoxColectivo.ResumeLayout(false);
+            gBoxColectivo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numCantidadAsientos).EndInit();
+            gBoxPasajero.ResumeLayout(false);
+            gBoxPasajero.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
-        private DataGridView dataGridView2;
-        private DataGridView dataGridView3;
-        private GroupBox groupBox1;
+        private DataGridView dgvPasajeros;
+        private DataGridView dgvPasajerosEstudiantes;
+        private DataGridView dgvColectivos;
+        private GroupBox gBoxColectivo;
         private TextBox txtNombre;
         private TextBox txtPatente;
-        private GroupBox groupBox2;
+        private GroupBox gBoxPasajero;
         private NumericUpDown numCantidadAsientos;
         private Label label3;
         private Label label2;
@@ -380,5 +413,7 @@
         private Label label10;
         private Label label11;
         private Button btnSalir;
+        private Button btnEliminarColectivo;
+        private Button btnEliminarPasajero;
     }
 }

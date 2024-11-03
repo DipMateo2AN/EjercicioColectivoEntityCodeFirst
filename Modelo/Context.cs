@@ -22,7 +22,7 @@ namespace Modelo
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseSqlServer("Data Source=(localdb)\\MssqllocalDb;Initial Catalog=ef;Integrated Security=true;");
+            options.UseSqlServer("Data Source=(localdb)\\MssqllocalDb;Initial Catalog=cfColectivo;Integrated Security=true;");
         }
 
     }

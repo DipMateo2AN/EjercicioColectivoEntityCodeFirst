@@ -10,23 +10,27 @@ namespace Controladora
     public class ControladoraPasajeros
     {
         private Context context = new Context();
-        public void AgregarPasajero(Pasajero nuevoPasajero)
+        public bool AgregarPasajero(Pasajero nuevoPasajero)
         {
             var busqueda = context.Pasajeros.FirstOrDefault(p => p.PasajeroId == nuevoPasajero.PasajeroId);
             if (busqueda == null)
             {
                 context.Pasajeros.Add(nuevoPasajero);
                 context.SaveChanges();
+                return true;
             }
+            return false;
         }
-        public void EliminarPasajero(Pasajero nuevoPasajero)
+        public bool EliminarPasajero(Pasajero nuevoPasajero)
         {
             var busqueda = context.Pasajeros.FirstOrDefault(p => p.PasajeroId == nuevoPasajero.PasajeroId);
             if (busqueda != null)
             {
                 context.Pasajeros.Add(nuevoPasajero);
                 context.SaveChanges();
+                return true;
             }
+            return false;
         }
 
     }
